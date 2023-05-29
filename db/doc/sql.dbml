@@ -1,0 +1,42 @@
+Project To_Do_APP {
+  database_type: 'PostgreSQL'
+  Note: '''
+    # To_Do Database
+  '''
+}
+
+Table users as U {
+  id bigserial [pk]
+  username varchar [not null, unique]
+  password varchar [not null]
+  created_at timestamptz [not null, default: `CURRENT_TIMESTAMP`]
+}
+
+Table actions as A {
+  id bigserial [pk]
+  username varchar [ref: > U.username, not null]
+  title varchar [not null]
+  completed boolean [not null, default: false]
+  created_at timestamptz [not null, default: `CURRENT_TIMESTAMP`]
+  change_at timestamptz [not null, default: '0001-01-01 00:00:00Z']
+}
+
+Table subactions as SA {
+  id bigserial [pk]
+  actions_id bigint [ref: > A.id, not null]
+  title varchar [not null]
+  completed boolean [not null, default: false]
+  created_at timestamptz [not null, default: `CURRENT_TIMESTAMP`]
+  change_at timestamptz [not null, default: '0001-01-01 00:00:00Z']
+}
+
+Table sessions {
+  id uuid [pk]
+  username varchar [ref: > U.username, not null]
+  refresh_token varchar [not null]
+  user_agent varchar [not null]
+  client_ip varchar [not null]
+  is_blocked boolean [not null, default: false]
+  expires_at timestamptz [not null]
+  created_at timestamptz [not null, default: `CURRENT_TIMESTAMP`]
+}

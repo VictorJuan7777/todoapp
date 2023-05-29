@@ -1,0 +1,255 @@
+body{
+    font-family: Roboto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    background-color: #0b123b;
+    width: 400px;
+    color: #f8f9fa;
+    padding: 40px;
+    box-shadow: 10px 10px 10px #00000060;
+    text-align: center;
+}
+.login input{
+    display:block;
+    margin:15px auto;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    outline: none;
+}
+.login p{
+    font-size: 20px;
+}
+.login input[type="submit"]{
+    background-color: #f8f9fa;
+    width: 200px;
+    margin: 50px auto -10px auto;
+    border: 3px solid #2ecc71;
+    cursor: pointer;
+}
+.login input[type="submit"]:hover{
+    background-color: #2ecc71;
+    transition: 0.5s;
+}
+
+.logout{
+display: none;
+}
+
+.top input{
+    background-color: #0b123b;
+    width: 100px;
+    color: #f8f9fa;
+    padding: 5px;
+    margin: 10px 0 0 auto;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.top span{
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.json-content{
+    display: flex;
+    overflow: scroll;
+    float:left;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    width: 335px;
+    height: 70vh;
+    color: #000000;
+    padding: 10px;
+    margin:20px;
+    text-align: center;
+}
+
+.json-subaction {
+    overflow: scroll;
+    float:left;
+    font-weight: bold;
+    background-color: #8e8787;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    width: 335px;
+    height: 70vh;
+    color: #000000;
+    padding: 10px;
+    margin:20px;
+    text-align: center;
+}
+
+.top {
+    border: 5px solid #000000;
+    border-radius: 10px;
+    width:800px;
+    height:80px;
+    text-align:center;
+    line-height:80px;
+    font-size:15px;
+}
+
+.json-content [name='action'] {
+    /* word-break: break-all; */
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    width:325px;
+    margin: 0 0 10px 0;
+    
+}
+
+.json-content [name="cbox"]{
+    vertical-align:middle;
+    float: left;
+    margin: 0 0 0 5px;
+}
+
+.json-content [id="actiontext"]{
+    
+    word-break: break-all;
+    /* /* text-align: left; */
+    /* height: auto; */
+    margin: 0px 10px 0px 30px;
+    text-align: left;
+    width: auto; 
+}
+
+
+
+.json-subaction [name='action'] {
+    /* word-break: break-all; */
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    width:325px;
+    margin: 0 0 10px 0;
+}
+
+.json-subaction [name="cbox"]{
+    vertical-align:center;
+    float: left;
+    margin: 5px;
+    height: auto;
+}
+
+.json-subaction [name="actiontext"]{
+    
+    word-break: break-all;
+    /* /* text-align: left; */
+    /* height: auto; */
+    margin: 0px 0px 1px -25px;
+    width: 260px;
+    text-align: left;
+    border-radius: 5px;
+    
+}
+
+.json-subaction [name="deletesub"]{
+    vertical-align:center;
+    float: right;
+    margin: 1px 2px 0 -20px;
+    width: 30px;
+    border-radius: 10px;
+}
+
+.json-content :hover {
+    
+    background-color: #89f1b1;
+    transition: 0.5s;
+}
+
+.json-subaction :hover {
+    
+    background-color: #89f1b1;
+    transition: 0.5s;
+}
+
+
+
+.json-content [id='white']{
+    padding:0;
+}
+
+.json-content [id="addaction"]{
+    vertical-align:middle;
+    margin:5px 5px 5px -35px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    word-break: break-all;
+    text-align: left;
+    width: 230px;
+}
+
+.json-content [id="sendaction"]{
+    text-align: center;
+    margin:5px -35px 5px 0px;
+    padding: 10px;
+    font-size: 10px;
+    border-radius: 10px;
+    width: 55px;
+    height: 40px;
+}
+
+.json-subaction [id="addaction"]{
+    vertical-align:middle;
+    margin:5px 5px 5px -35px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    word-break: break-all;
+    text-align: left;
+    width: 230px;
+}
+
+.json-subaction [id="addsubaction"]{
+    vertical-align:middle;
+    margin:5px 5px 5px -35px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    word-break: break-all;
+    text-align: left;
+    width: 230px;
+}
+
+.json-subaction [id="sendaction"]{
+    text-align: center;
+    margin:5px -35px 5px 0px;
+    padding: 10px;
+    font-size: 10px;
+    border-radius: 10px;
+    width: 55px;
+    height: 40px;
+}
+.json-subaction [name="deleteaction"]{
+    text-align: center;
+    margin:5px -35px 5px 0px;
+    padding: 10px;
+    font-size: 10px;
+    border-radius: 10px;
+    width: 55px;
+    height: 40px;
+}
+
+.json-subaction [id="showactiontext"]{
+    vertical-align:middle;
+    margin:5px 5px 5px -35px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    word-break: break-all;
+    text-align: left;
+    width: 230px;
+
+}
